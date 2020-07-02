@@ -31,10 +31,18 @@ loadData() {
     });
 }
 
+let loadData = true;
 loadData()
     .then((data) => { // 'yay greater than .5'
         console.log('success:' + data);
     })
+    .then()
+    .then()
     .catch((err) => { // 'oh no, less than .5'
         console.log('error: '+ err);
+    })
+    .then(() => {
+        loadData = false;
     });
+
+// ASYNC await
