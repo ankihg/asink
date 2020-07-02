@@ -75,7 +75,8 @@ new Promise((resolve, reject) => {
         // Can return another promise
         return new Promise((resolve, reject) => {
             makeApiCall(() => {
-                resolve(value + ' very good');
+                // resolve(value + ' very good');
+                reject(value + ' very bad');
             })
         });
     })
@@ -85,8 +86,13 @@ new Promise((resolve, reject) => {
     .then((value) => {
         console.log(value);
     })
+    // Anytime there's an error in the above chain it will jump to the next catch block
     .catch((err) => {
         console.log('Error:', err);
+    })
+    // Then it will continue to the next then block, either after the catch or after the previous then (skipping the catch block)
+    .then(() => {
+        console.log('aarf!');
     });
 
 // Promise all
