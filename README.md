@@ -53,13 +53,11 @@ JavaScript has a few approaches for handling this. **Callbacks functions**, in m
 ### Threads
 Many languages handle this "waiting to load" scenario by having multiple "threads" (**multi-threaded** - the ability to execute multiple lines of code at once).
 
-("Executing in parellel")
-Think: Holding your baby in one hand and washing dishes with the other at the same time
+"Executing in parallel"
 
 JavaScript is a **single-threaded** language meaning it can only execute one line of code at a time so it has a few techniques to pretend it's doing multiple things at once and not get hung up waiting for a result from someone else.
 
-("Executing concurrently") Think: You fed your baby and now he will take a nap. You start to do the dishes and between each dish you check in to see if he needs anything. If you see he needs something you will take a break from dishes to care for him. Then get back to the dishes.
-
+"Executing concurrently"
 
 
 ### Callbacks
