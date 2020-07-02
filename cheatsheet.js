@@ -76,7 +76,7 @@ new Promise((resolve, reject) => {
         return new Promise((resolve, reject) => {
             makeApiCall(() => {
                 // resolve(value + ' very good');
-                reject(value + ' very bad');
+                reject(value + ' bad');
             })
         });
     })
